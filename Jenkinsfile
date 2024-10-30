@@ -3,11 +3,15 @@ pipeline {
 
     stages {
 	stage('pre') {
-	  echo "pre"
-
+	 steps { 
+	   sh 'echo pre'
+	   sh 'ls'
+         }
 	}
 	stage('run') {
-	  echo "run"
+          steps {
+  	  sh 'echo run
+          }
 	}
     }
 }	
