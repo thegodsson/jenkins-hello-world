@@ -1,9 +1,6 @@
 # Springboot Hello World App
 This repository is used for Jenkins Training Demo
 
-### Linux/macOS users
-
-
 ### Build JAR (linux/macOS)
 ```
 ./mvnw clean package -DskipTests=true
