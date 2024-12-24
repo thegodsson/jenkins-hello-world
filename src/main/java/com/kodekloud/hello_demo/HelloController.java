@@ -8,7 +8,7 @@ public class HelloController {
 
     @RequestMapping("/hello")
     String hello() {
-        return "Hello, Asim Shaikh!";
+        return "Hello, Asim Shaikh!, You made commit as well";
     }
 
 }
