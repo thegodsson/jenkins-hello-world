@@ -29,7 +29,7 @@ public class HelloControllerTests {
     public void welcome_ok() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/hello").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(content().string(equalTo("Hello, KodeKloud community!")));
+                .andExpect(content().string(equalTo("Hello, Asim Shaikh!, you made a commit as well")));
     }
 
     @Test
@@ -52,7 +52,7 @@ public class HelloControllerTests {
     public void welcome_returnsCorrectLength() throws Exception {
       mvc.perform(MockMvcRequestBuilders.get("/hello").accept(MediaType.APPLICATION_JSON))
           .andExpect(status().isOk())
-          .andExpect(content().string(hasLength(27))); 
+          .andExpect(content().string(hasLength(44))); 
 
     }
 
@@ -60,7 +60,7 @@ public class HelloControllerTests {
     public void welcome_startsWithExpectedGreeting() throws Exception {
       mvc.perform(MockMvcRequestBuilders.get("/hello").accept(MediaType.APPLICATION_JSON))
           .andExpect(status().isOk())
-          .andExpect(content().string(startsWith("Hola"))); 
+          .andExpect(content().string(startsWith("Hello"))); 
 
     }
 
@@ -68,7 +68,7 @@ public class HelloControllerTests {
     public void welcome_endsWithExpectedGreeting() throws Exception {
       mvc.perform(MockMvcRequestBuilders.get("/hello").accept(MediaType.APPLICATION_JSON))
           .andExpect(status().isOk())
-          .andExpect(content().string(endsWith("community!")));
+          .andExpect(content().string(endsWith("well")));
 
     }
   }
